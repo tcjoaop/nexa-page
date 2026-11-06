@@ -34,9 +34,9 @@ defineProps({
 
 <template>
   <!-- ========================================== -->
-  <!-- 3. SEÇÃO DE CARDS (O que fazemos, etc.)    -->
+  <!-- 3. SEÇÃO DE CARDS / HISTÓRIA & PROPÓSITO   -->
   <!-- ========================================== -->
-  <section class="relative bg-brand-aqua py-12 md:py-20 px-6 -mt-1 z-10">
+  <section id="historia" class="relative bg-brand-aqua py-16 md:py-24 px-6 -mt-1 z-10 scroll-mt-20">
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8 items-stretch">
         <article
@@ -48,29 +48,23 @@ defineProps({
           <div class="w-full h-44 sm:h-48 overflow-hidden rounded-xl bg-brand-navy/10 mb-6 flex-shrink-0">
             <img
               :alt="card.alt"
-              class="w-full h-full object-cover rounded-xl"
-              height="180"
+              class="w-full h-full object-cover"
+              height="200"
+              loading="lazy"
               :src="card.image"
-              width="400"
-            />
-            <img
-              :alt="card.title"
-              class="hidden w-full h-36 object-cover rounded-xl"
-              height="180"
-              :src="card.image"
-              width="400"
+              width="300"
             />
           </div>
 
-          <!-- Título -->
-          <h2 class="text-2xl font-black text-brand-navy mb-4 tracking-tight">
-            {{ card.title }}
-          </h2>
-
-          <!-- Parágrafo descritivo -->
-          <p class="text-brand-navy text-sm md:text-[0.935rem] leading-relaxed font-semibold">
-            {{ card.description }}
-          </p>
+          <!-- Conteúdo Textual -->
+          <div class="flex flex-col flex-1">
+            <h3 class="text-2xl sm:text-3xl font-black text-brand-navy mb-3 tracking-tight">
+              {{ card.title }}
+            </h3>
+            <p class="text-brand-navy/90 text-sm sm:text-base leading-relaxed font-normal flex-1">
+              {{ card.description }}
+            </p>
+          </div>
         </article>
       </div>
     </div>

@@ -1,6 +1,7 @@
 <script setup>
 import TheHeader from '@/components/TheHeader.vue'
 import HeroSection from '@/components/HeroSection.vue'
+import MapSection from '@/components/MapSection.vue'
 import AboutCardsSection from '@/components/AboutCardsSection.vue'
 import MembershipSection from '@/components/MembershipSection.vue'
 import OpportunitiesSection from '@/components/OpportunitiesSection.vue'
@@ -12,6 +13,8 @@ import TheFooter from '@/components/TheFooter.vue'
     <TheHeader />
     <main class="flex-1">
       <HeroSection />
+      <!-- Seção do Mapa Interativo dos Núcleos Nexa no Brasil -->
+      <MapSection />
       <AboutCardsSection />
       <MembershipSection />
       <OpportunitiesSection />
